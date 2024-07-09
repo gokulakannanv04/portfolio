@@ -87,17 +87,21 @@
             #navbar ul.show li {
                 margin-bottom: 10px;
             }
+            
+        }
+        .bg-black-50 {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
         }
     </style>
 </head>
 <body class="bg-gray-100">
  <!-- Navigation -->
- <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-800 py-4">
+ <nav id="navbar" class="fixed top-0 left-0 w-full bg-white py-4 z-10">
     <div class="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" class="text-white text-2xl font-bold">Portfolio</a>
+        <a href="#" class="text-black text-2xl font-bold">Portfolio</a>
         <!-- Mobile Menu Icon -->
-        <div id="mobile-menu" class="text-white cursor-pointer">
-            <div style="background-color: rgba(0, 0, 0, 0); padding: 5px; display: inline-block;">
+        <div id="mobile-menu" class="text-while cursor-pointer">
+            <div style="background-color: rgb(241, 234, 234); padding: 5px; display: inline-block;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M3 12h18M3 6h18M3 18h18"></path>
                 </svg>
@@ -105,16 +109,16 @@
         </div>
         <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-4">
-            <li><a href="#home" class="text-white">Home</a></li>
-            <li><a href="#about" class="text-white">About</a></li>
-            <li><a href="#projects" class="text-white">Projects</a></li>
-            <li><a href="#skills" class="text-white">Skills</a></li>
+            <li><a href="#home" class="text-black  text-xl">Home</a></li>
+            <li><a href="#about" class="text-black text-xl ">About</a></li>
+            <li><a href="#projects" class="text-black text-xl">Projects</a></li>
+            <li><a href="#skills" class="text-black text-xl">Skills</a></li>
         </ul>
-        <a href="mailto:gokulakannanv04@gmail.com" class="text-white hidden md:flex">Contact Me</a>
+        <a href="mailto:gokulakannanv04@gmail.com" class="text-black hidden text-xl md:flex">Contact Me</a>
     </div>
     <!-- Mobile Menu -->
     <ul id="mobile-menu-dropdown" class="hidden">
-        <li><a href="#" class="text-white">Home</a></li>
+        <li><a href="#" class="text-white ">Home</a></li>
         <li><a href="#about" class="text-white">About</a></li>
         <li><a href="#projects" class="text-white">Projects</a></li>
         <li><a href="#skills" class="text-white">Skills</a></li>
@@ -127,13 +131,14 @@
     <div class="container mx-auto ">
 
   <!-- Home Section -->
-  <section id="home" class="py-12 bg-cover" style="background-image: url('blue.png'); height: 100vh;">
-    <div class="max-w-4xl mx-auto text-center justify-between items-center">
+  <section id="home" class=" relative flex items-center justify-center bg-cover text-center" style="background-image: url('front.jpeg'); height: 100vh;">
+    <div class="absolute inset-0 bg-black-50"></div> 
+    <div class=" z-9 relative">
         <!-- <div class="w-1/2"> -->
             <h2 class="text-7xl font-semibold text-white py-20 mb-4">Welcome to My Website</h2>
-            <p class="text-lg text-4xl font-bold">I am GOKULA KANNAN V</p>
+            <p class="text-lg text-4xl text-white font-bold">I am GOKULA KANNAN V</p>
             <div class="d-flex align-items-center justify-content-center justify-content-lg-start py-16">
-                <a href="resume.pdf" class="btn btn-primary mr-4">Download CV</a>
+                <a href="resume.pdf"  target="_blank" class="btn btn-primary mr-4">Download CV</a>
             </div>
         <!-- </div> -->
         <!-- <div class="w-1/2"> -->
@@ -144,10 +149,10 @@
 </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20">
-            <div class="px-8 md:px-12 lg:px-20 mx-auto">
-                <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-                <p class="text-lg text-gray-700"> I am Gokula Kannan V. I am enthusiastic about technology and eager to kickstart my career in the IT industry. I have gained practical experience in web development and I am keen to apply my skills in a professional setting.<br></br>
+        <section id="about" class="pt-20">
+            <div class="px-8 md:px-12 lg:px-20 mx-auto  text-center">
+                <h2 class="text-6xl  font-semibold mb-4">About Me</h2>
+                <p class="text-2xl text-gray-700"> I am Gokula Kannan V. I am enthusiastic about technology and eager to kickstart my career in the IT industry. I have gained practical experience in web development and I am keen to apply my skills in a professional setting.<br></br>
 
                     I have contributed to various projects, including creating my portfolio website and collaborating on the development of Televein's website, where we effectively communicated our business offerings. Another notable project is BioCakes, where we designed an engaging platform for showcasing cake products.<br></br>
                     
@@ -159,13 +164,13 @@
             </div>
         </section>
    <!-- Projects Section -->
-   <section id="projects" class="py-20">
-    <div class="px-8 md:px-12 lg:px-20 mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">My Projects</h2>
-        <p class="text-lg text-gray-700"> Discover a collection of my projects, ranging from personal endeavors to collaborative ventures. Each project is a testament to my skills . Click on the project to explore them further.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div class="flex justify-center items-center">
-                <div class="bg-gray-200 p-6 rounded-lg">
+   <section id="projects" class="pt-20">
+    <div class="px-8 md:px-12 lg:px-20 mx-auto text-center">
+        <h2 class="text-6xl  font-semibold mb-4">My Projects</h2>
+        <p class="text-3xl text-gray-700"> Discover a collection of my projects, ranging from personal endeavors to collaborative ventures. Each project is a testament to my skills . Click on the project to explore them further.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-20">
+            <div class="py-4 flex-1 flex items-center justify-center shadow-lg rounded-lg bg-gradient-to-r bg-gray-200 hover:from-black hover:to-blue-500 hover:text-white text-black font-semibold px-6 py-3 rounded-md group">
+                
                     <a class="col-lg-4 col-sm-6" href="https://chessgokul.netlify.app" target="_blank" style="text-decoration: none;">
                         <div class="item">
                             <div class="flex justify-center"> <!-- Centering image horizontally -->
@@ -173,14 +178,13 @@
                             </div>
                             <div class="text-center"> <!-- Centering h3 and p horizontally -->
                                 <h3 class="text-xl font-semibold mb-2">Chess Game</h3>
-                                <p class="text-gray-700">Experience the timeless strategy of chess in our online multiplayer React app, featuring real-time gameplay </p>
+                                <p class="text-gray-700 group-hover:text-white">Experience the timeless strategy of chess in our online multiplayer React app, featuring real-time gameplay </p>
                             </div>
                         </div>
                     </a>
-                </div>
+                
             </div>
-            <div class="flex justify-center items-center">
-                <div class="bg-gray-200 p-6 rounded-lg">
+                <div class="py-4 flex-1 flex items-center justify-center shadow-lg rounded-lg bg-gradient-to-r bg-gray-200 hover:from-black hover:to-blue-500 hover:text-white text-black font-semibold px-6 py-3 rounded-md group">
                     <a class="col-lg-4 col-sm-6" href="https://televein.netlify.app" target="_blank" style="text-decoration: none;">
                         <div class="item">
                             <div class="flex justify-center"> <!-- Centering image horizontally -->
@@ -188,13 +192,12 @@
                             </div>
                             <div class="text-center"> <!-- Centering h3 and p horizontally -->
                                 <h3 class="text-xl font-semibold mb-2">TeleVien</h3>
-                                <p class="text-gray-700">Televein leads the way in crafting  web and mobile app solutions with technology and exceptional quality assurance.</p>
+                                <p class="text-gray-700 group-hover:text-white ">Televein leads the way in crafting  web and mobile app solutions with technology and exceptional quality assurance.</p>
                             </div>
                         </div>
                     </a>
-                </div>
-            </div> <div class="flex justify-center items-center">
-                <div class="bg-gray-200 p-6 rounded-lg">
+            </div>
+                <div class="py-4 flex-1 flex items-center justify-center shadow-lg rounded-lg bg-gradient-to-r bg-gray-200 hover:from-black hover:to-blue-500 hover:text-white text-black font-semibold px-6 py-3 rounded-md group">
                     <a class="col-lg-4 col-sm-6" href="https://chatbot.televein.in" target="_blank" style="text-decoration: none;">
                         <div class="item">
                             <div class="flex justify-center"> <!-- Centering image horizontally -->
@@ -202,11 +205,11 @@
                             </div>
                             <div class="text-center"> <!-- Centering h3 and p horizontally -->
                                 <h3 class="text-xl font-semibold mb-2">Chat Bot</h3>
-                                <p class="text-gray-700">I am clarifying the doubts of the 12th student who are going to achieve their goals </p>
+                                <p class="text-gray-700 group-hover:text-white">I am clarifying the doubts of the 12th student who are going to achieve their goals </p>
                             </div>
                         </div>
                     </a>
-                </div>
+            
             <!-- </div> <div class="flex justify-center items-center">
                 <div class="bg-gray-200 p-6 rounded-lg">
                     <a class="col-lg-4 col-sm-6" href="https://chessgokul.netlify.app" target="_blank" style="text-decoration: none;">
@@ -228,8 +231,8 @@
 </section>
         <!-- Services Section -->
         <section id="skills" class="py-20 bg-white">
-            <div class=" mx-auto px-8 md:px-12 lg:px-20">
-                <h2 class="text-3xl font-semibold mb-4">My Skills</h2>
+            <div class=" mx-auto px-8 md:px-12 lg:px-20 text-center">
+                <h2 class="text-6xl font-semibold mb-4">My Skills</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     
                     <div class="bg-gray-200 p-6 rounded-lg">
