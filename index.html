@@ -8,6 +8,7 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <style>
    .btn-primary {
     color: #fff;
@@ -97,6 +98,35 @@
             height: 200px;
             
         }
+        
+input[type=text],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  align-items: center;
+}
+
+#contact{
+  padding: 2%;
+}
     </style>
 </head>
 <body class="bg-gray-100">
@@ -119,7 +149,7 @@
             <li><a href="#projects" class="text-black text-xl">Projects</a></li>
             <li><a href="#skills" class="text-black text-xl">Skills</a></li>
         </ul>
-        <a href="mailto:gokulakannanv04@gmail.com" class="text-black hidden text-xl md:flex">Contact Me</a>
+        <a href="#contact" class="text-black hidden text-xl md:flex">Contact Me</a>
     </div>
     <!-- Mobile Menu -->
     <ul id="mobile-menu-dropdown" class="hidden">
@@ -127,7 +157,7 @@
         <li><a href="#about" class="text-white">About</a></li>
         <li><a href="#projects" class="text-white">Projects</a></li>
         <li><a href="#skills" class="text-white">Skills</a></li>
-        <li><a href="mailto:gokulakannanv04@gmail.com" class="text-white">Contact Me</a></li>
+        <li><a href="#contact" class="text-white">Contact Me</a></li>
     </ul>
 </nav>
 
@@ -297,11 +327,64 @@
                 </div>
             </div>
         </section>
-
+        <section id="contact"  class="pt-20 ">
+            <div class="container">
+    
+              <h2 class="text-6xl  font-semibold mb-4 text-center text-blue-900">Contact Us</h2>
+              <form id="contactForm">
+                <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Your Email..">
+    
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+    
+    
+    
+        <input type="submit" value="Submit">
+                 
+              </form>
+              <div id="responseMessage"></div>
+          </div>
+          </section>
      
 
     </div>
-
+    <script>
+        (function() {
+            emailjs.init('Z2njvmvcI-wjo7maa'); 
+        })();
+  
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+  
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+    
+  
+            const templateParams = {
+              reply_to: "gokulakannanv04@gmail.com",
+                message: message,
+                name:name,
+                email:email,
+                website:"Gokul profolio"
+  
+            };
+  
+            emailjs.send('service_6ojok14', 'template_ivinqlz', templateParams)
+                .then(function(response) {
+                    document.getElementById('responseMessage').innerText = 'Email sent successfully!';
+                    document.getElementById('responseMessage').classList.remove('error');
+                }, function(error) {
+                    document.getElementById('responseMessage').innerText = 'Error sending email.';
+                    document.getElementById('responseMessage').classList.add('error');
+                    console.error('Error:', error);
+                });
+        });
+    </script>
     <script>  // Set the height of the home section to match the viewport height
         document.addEventListener('DOMContentLoaded', function () {
             var homeSection = document.getElementById('home');
